@@ -16,7 +16,15 @@ wordContainer.innerHTML = "";
 words.forEach(word =>{
     const card=document.createElement('div');
     card.innerHTML=`
-    <p>cat</p>
+      <div class="bg-white rounded-xl shadow-sm text-center py-20 px-10 space-y-3">
+        <h2 class="font-bold text-[32px]">Eager</h2>
+        <p class="text-[20px]">Meaning /Pronounciation</p>
+        <div class="font-bangla text-[32px] font-semibold text-[#18181B]">"আগ্রহী / ইগার"</div>
+        <div class="flex justify-between items-center">
+            <button class="bg-[#E9F4FF10] hover:bg-[#E9F4FF] btn"><i class="fa-solid fa-info"></i></button>
+            <button class="bg-[#E9F4FF10] hover:bg-[#E9F4FF] btn"><i class="fa-solid fa-volume-high"></i></button>
+        </div>
+    </div>
     `;
     wordContainer.append(card);
 })
