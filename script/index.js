@@ -14,6 +14,17 @@ const displayLevelWords = (words)=> {
 const wordContainer = document.getElementById('word-container')
 wordContainer.innerHTML = "";
 
+if(words.length == 0){
+    wordContainer.innerHTML = `
+    <div class="text-center col-span-full space-y-5">
+    <img class="mx-auto" src="./assets/alert-error.png"/>
+    <p class="font-bold text-[13.38px] text-[#79716B] font-bangla">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
+    <h2 class="font-bold text-[34.31px] text-[#292524] font-bangla">নেক্সট Lesson এ যান</h2>
+  </div>
+    `;
+    return
+}
+
 words.forEach(word =>{
     const card=document.createElement('div');
     card.innerHTML=`
